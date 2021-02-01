@@ -1,0 +1,36 @@
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/bin/Debug/net5.0/BassTest
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/bin/Debug/net5.0/BassTest.deps.json
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/bin/Debug/net5.0/BassTest.runtimeconfig.json
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/bin/Debug/net5.0/BassTest.runtimeconfig.dev.json
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/bin/Debug/net5.0/BassTest.dll
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/bin/Debug/net5.0/ref/BassTest.dll
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/bin/Debug/net5.0/BassTest.pdb
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/bin/Debug/net5.0/ManagedBass.dll
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/obj/Debug/net5.0/BassTest.csprojAssemblyReference.cache
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/obj/Debug/net5.0/BassTest.GeneratedMSBuildEditorConfig.editorconfig
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/obj/Debug/net5.0/BassTest.AssemblyInfoInputs.cache
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/obj/Debug/net5.0/BassTest.AssemblyInfo.cs
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/obj/Debug/net5.0/BassTest.csproj.CoreCompileInputs.cache
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/obj/Debug/net5.0/BassTest.csproj.CopyComplete
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/obj/Debug/net5.0/BassTest.dll
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/obj/Debug/net5.0/ref/BassTest.dll
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/obj/Debug/net5.0/BassTest.pdb
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/obj/Debug/net5.0/BassTest.genruntimeconfig.cache
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/bin/Debug/net5.0/BassTest
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/bin/Debug/net5.0/BassTest.deps.json
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/bin/Debug/net5.0/BassTest.runtimeconfig.json
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/bin/Debug/net5.0/BassTest.runtimeconfig.dev.json
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/bin/Debug/net5.0/BassTest.dll
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/bin/Debug/net5.0/ref/BassTest.dll
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/bin/Debug/net5.0/BassTest.pdb
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/bin/Debug/net5.0/ManagedBass.dll
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/obj/Debug/net5.0/BassTest.csprojAssemblyReference.cache
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/obj/Debug/net5.0/BassTest.GeneratedMSBuildEditorConfig.editorconfig
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/obj/Debug/net5.0/BassTest.AssemblyInfoInputs.cache
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/obj/Debug/net5.0/BassTest.AssemblyInfo.cs
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/obj/Debug/net5.0/BassTest.csproj.CoreCompileInputs.cache
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/obj/Debug/net5.0/BassTest.csproj.CopyComplete
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/obj/Debug/net5.0/BassTest.dll
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/obj/Debug/net5.0/ref/BassTest.dll
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/obj/Debug/net5.0/BassTest.pdb
+/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/obj/Debug/net5.0/BassTest.genruntimeconfig.cache

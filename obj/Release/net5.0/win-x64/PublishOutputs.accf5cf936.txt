@@ -1,0 +1,6 @@
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/build/BassTest.pdb
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/build/clrcompression.dll
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/build/clrjit.dll
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/build/coreclr.dll
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/build/mscordaccore.dll
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/build/BassTest.exe

@@ -1,0 +1,2 @@
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/build/BassTest.pdb
+/home/mathisj/Dokumente/C# Projekte/BASS/BassTest/build/BassTest
