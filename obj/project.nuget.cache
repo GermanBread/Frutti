@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6KboRxck14rO3qTZEqmj+hcxFa9496gVt+Jy9AVqKR9LBmsw9Kt+24uogCpUU6O001VjOI990QxbHzE+VGLf4w==",
+  "dgSpecHash": "eQOUTW0HDvd8JFRVhOtQ6oOxo8DmnZdENoIjrbBkiyjN6fpvMhoXdtVdnFiabW2mY3fReRjYh73jqMcIKZriIg==",
   "success": true,
   "projectFilePath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/Frutti.csproj",
   "expectedPackageFiles": [
@@ -12,8 +12,9 @@
     "/home/mathisj/.nuget/packages/ppy.osu.framework.nativelibs/2021.115.0/ppy.osu.framework.nativelibs.2021.115.0.nupkg.sha512",
     "/home/mathisj/.nuget/packages/system.security.accesscontrol/4.5.0/system.security.accesscontrol.4.5.0.nupkg.sha512",
     "/home/mathisj/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512",
-    "/home/mathisj/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/5.0.1/microsoft.netcore.app.runtime.linux-x64.5.0.1.nupkg.sha512",
-    "/home/mathisj/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/5.0.1/microsoft.aspnetcore.app.runtime.linux-x64.5.0.1.nupkg.sha512",
+    "/home/mathisj/.nuget/packages/microsoft.netcore.app.runtime.win-x64/5.0.1/microsoft.netcore.app.runtime.win-x64.5.0.1.nupkg.sha512",
+    "/home/mathisj/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/5.0.1/microsoft.aspnetcore.app.runtime.win-x64.5.0.1.nupkg.sha512",
+    "/home/mathisj/.nuget/packages/microsoft.netcore.app.host.win-x64/5.0.1/microsoft.netcore.app.host.win-x64.5.0.1.nupkg.sha512",
     "/home/mathisj/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
