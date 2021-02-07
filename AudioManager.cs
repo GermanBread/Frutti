@@ -52,12 +52,7 @@ namespace UnsignedFramework
             FilePath = Path.GetFullPath(File);
         }
         public void Replace(string File) {
-            // Just supress any errors...
-            try {
-                Close();
-            } catch (Exception ex) {
-                Program.errors.Add($"\"{FileName}\"" + " caused error: " + $"\"{ex.Message}\"");
-            }
+            Close();
             Open(File);
         }
         public void Play() {

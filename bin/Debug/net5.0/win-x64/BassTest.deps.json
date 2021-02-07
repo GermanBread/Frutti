@@ -10,6 +10,7 @@
       "BassTest/1.0.0": {
         "dependencies": {
           "ManagedBass": "3.0.0",
+          "ppy.osu.Framework.NativeLibs": "2021.115.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "5.0.1"
         },
         "runtime": {
@@ -850,6 +851,40 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "ppy.osu.Framework.NativeLibs/2021.115.0": {
+        "native": {
+          "runtimes/win-x64/native/avcodec-58.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/avdevice-58.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/avfilter-7.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/avformat-58.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/avutil-56.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/bass.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/bass_fx.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/postproc-55.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/swresample-3.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/swscale-5.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
       }
     }
   },
@@ -870,6 +905,13 @@
       "sha512": "sha512-ieVHpRzSVJO5MQvSE2qlGhNrDdLPYFkkpqeNc6DJdGtQI/LP4uiMkzHX8sDUy8yF5u2Eg2aLrPvbF8+XKBfBgQ==",
       "path": "managedbass/3.0.0",
       "hashPath": "managedbass.3.0.0.nupkg.sha512"
+    },
+    "ppy.osu.Framework.NativeLibs/2021.115.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GF63LLZLQ2pUBVFJaKLjbQ21Ks+oOEqp59udZsvRkR21IDoyIXVmoWHwT+fZZl4WFOy4yDlEYt2ItZGB2O6dKA==",
+      "path": "ppy.osu.framework.nativelibs/2021.115.0",
+      "hashPath": "ppy.osu.framework.nativelibs.2021.115.0.nupkg.sha512"
     }
   },
   "runtimes": {

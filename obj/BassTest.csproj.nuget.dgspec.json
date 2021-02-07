@@ -41,6 +41,10 @@
             "ManagedBass": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "ppy.osu.Framework.NativeLibs": {
+              "target": "Package",
+              "version": "[2021.115.0, )"
             }
           },
           "imports": [
