@@ -52,11 +52,11 @@ namespace UnsignedFramework
             FilePath = Path.GetFullPath(File);
         }
         public void Replace(string File) {
-            Close();
-            Handle = Bass.CreateStream(File);
-            if (Handle == 0)
-                throw new BassException { };
-            FilePath = Path.GetFullPath(File);
+            // Just supress any errors...
+            try {
+                Close();
+            } catch { }
+            Open(File);
         }
         public void Play() {
             if (!Bass.ChannelPlay(Handle))

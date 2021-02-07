@@ -36,48 +36,61 @@ namespace BassTest
                 Console.WriteLine($"No music files were found in \"{MusicPath}\"");
                 return;
             }
+            AC.Open(Files[0]);
             for (var i = 0; i < Files.Count; i++)
             {
-                if (AC.ClipStatus == PlaybackState.Stopped)
-                {
-                    try
-                    {
-                        if (AC.FilePath != null)
-                            AC.Replace(Files[i]);
-                        else
-                            AC.Open(Files[i]);
-                        AC.Play();
-                    }
-                    catch
-                    {
-                        continue;
-                    }
-                }
-                
+                AC.Replace(Files[i]);
+                AC.Play();
+
                 while (AC.ClipStatus == PlaybackState.Playing)
                 {
-                    string PlaybackStatus = $"Now playing: {Path.GetFileNameWithoutExtension(AC.FileName)} [{Math.Round(AC.ClipPosition * 10) / 10}s/{Math.Round(AC.ClipLength * 10) / 10}s]";
+                    string playbackPrefix = "Now playing: ";
+                    string playbackName = new string(Path.GetFileNameWithoutExtension(AC.FileName).Take(Console.WindowWidth - playbackPrefix.Length).ToArray());
+                    string playbackProgress = $" [{Math.Round(AC.ClipPosition * 10) / 10 + "s", -5}/{Math.Round(AC.ClipLength * 10) / 10 + "s", -5}]";
                 
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.BackgroundColor = ConsoleColor.DarkGray;
                     Console.WriteLine(BarGraph(AC.ClipPosition * 1000, AC.ClipLength * 1000, Console.WindowWidth));
                     Console.ResetColor();
-                    Console.WriteLine(PlaybackStatus);
+                    Console.Write(playbackPrefix);
+                    Console.Write(playbackName);
+                    try {
+                        Console.CursorLeft = Console.WindowWidth - playbackProgress.Length;
+                    } catch { }
+                    Console.WriteLine(playbackProgress);
                     if (Files.Count > i + 1)
                     {
                         Console.WriteLine("Queue: ");
                         for (var index = i; index < Math.Clamp(Files.Count, 0, 6 + i); index++)
                         {
-                            if (index > i)
-                                Console.WriteLine($"{index - i}: {Path.GetFileNameWithoutExtension(Files[index])}");
+                            if (DateTime.Now.Millisecond / 100 == index - 1)
+                                Console.ForegroundColor = ConsoleColor.White;
+                            else if (DateTime.Now.Millisecond / 100 == index)
+                                Console.ForegroundColor = ConsoleColor.Gray;
+                            else
+                                Console.ForegroundColor = ConsoleColor.DarkGray;
+                            if (i == index) continue;
+                            
+                            string prefix = $"{index - i}: ";
+                            string name = Path.GetFileNameWithoutExtension(Files[index]);
+                            string extension = Path.GetExtension(Files[index]).ToUpper();
+                            
+                            Console.Write(prefix);
+                            Console.ResetColor();
+                            
+                            Console.Write(new string(name.Take(Console.WindowWidth - extension.Length - 2 - prefix.Length).ToArray()));
+                            try {
+                                Console.CursorLeft = Console.WindowWidth - extension.Length - 2;
+                            } catch { }
+                            Console.WriteLine($"[{extension}]");
+                            Console.ResetColor();
                         }
-                    Thread.Sleep(100);
+                    Thread.Sleep(50);
                 }
                 Thread.Sleep(10);
             }
             AC.Close();
-
             Console.CursorVisible = true;
         }}
         static string BarGraph(double value, double maxValue, int width)

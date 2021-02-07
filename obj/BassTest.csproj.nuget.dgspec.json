@@ -57,6 +57,14 @@
             {
               "name": "Microsoft.AspNetCore.App.Ref",
               "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[5.0.1, 5.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[5.0.1, 5.0.1]"
             }
           ],
           "frameworkReferences": {
@@ -65,6 +73,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.101/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     }
