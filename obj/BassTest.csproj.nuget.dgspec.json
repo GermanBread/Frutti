@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/BassTest.csproj": {}
+    "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj": {}
   },
   "projects": {
-    "/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/BassTest.csproj": {
+    "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/BassTest.csproj",
+        "projectUniqueName": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj",
         "projectName": "BassTest",
-        "projectPath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/BassTest.csproj",
+        "projectPath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj",
         "packagesPath": "/home/mathisj/.nuget/packages/",
-        "outputPath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/obj/",
+        "outputPath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mathisj/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "DiscordRichPresence": {
+              "target": "Package",
+              "version": "[1.0.175, )"
+            },
             "ManagedBass": {
               "target": "Package",
               "version": "[3.0.0, )"

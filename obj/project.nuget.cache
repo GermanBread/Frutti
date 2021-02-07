@@ -1,14 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "7PpSwKF4tdjGguhofkPBzo1ubLOJKKuq/2tpizD306MoHwx3DcC6C71ed6u3picYPuDFaFtO91mWmrbH39QiWQ==",
+  "dgSpecHash": "0HDOoyt+OG3I8IFfI2f92pimKb7yi3pIPEcFdGc10wqZ5msCcL4YWTVXxp1JRLqKbeRxsgVQdAhAdsIkNSVFUw==",
   "success": true,
-  "projectFilePath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/BassTest/BassTest.csproj",
+  "projectFilePath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj",
   "expectedPackageFiles": [
+    "/home/mathisj/.nuget/packages/discordrichpresence/1.0.175/discordrichpresence.1.0.175.nupkg.sha512",
     "/home/mathisj/.nuget/packages/managedbass/3.0.0/managedbass.3.0.0.nupkg.sha512",
+    "/home/mathisj/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "/home/mathisj/.nuget/packages/microsoft.win32.registry/4.5.0/microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "/home/mathisj/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
     "/home/mathisj/.nuget/packages/ppy.osu.framework.nativelibs/2021.115.0/ppy.osu.framework.nativelibs.2021.115.0.nupkg.sha512",
-    "/home/mathisj/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/5.0.1/microsoft.netcore.app.runtime.linux-x64.5.0.1.nupkg.sha512",
+    "/home/mathisj/.nuget/packages/system.security.accesscontrol/4.5.0/system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "/home/mathisj/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512",
+    "/home/mathisj/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
     "/home/mathisj/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/5.0.1/microsoft.aspnetcore.app.runtime.linux-x64.5.0.1.nupkg.sha512",
-    "/home/mathisj/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+    "/home/mathisj/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/5.0.1/microsoft.netcore.app.runtime.linux-x64.5.0.1.nupkg.sha512"
   ],
   "logs": []
 }

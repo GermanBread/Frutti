@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Collections.Generic;
 
 // ManagedBass
@@ -14,6 +15,8 @@ using UnsignedFramework;
 class Program
 {
     public static List<string> errors = new List<string> { };
+    private static CancellationTokenSource cts = new CancellationTokenSource();
+    private static RPC rpc = new RPC();
     static void Main(string[] args)
     {
         Console.CancelKeyPress += new ConsoleCancelEventHandler(HandleSIGINT);
@@ -38,6 +41,18 @@ class Program
             Console.WriteLine($"No music files were found in \"{MusicPath}\"");
             return;
         }
+        new TaskFactory().StartNew(async ()
+         => {
+                await rpc.Start();
+                while (!cts.IsCancellationRequested)
+                {
+                    await rpc.SetSong(AC);
+                    await Task.Delay(1000);
+                }
+                await rpc.Stop();
+            }
+        );
+        
         for (var i = 0; i < Files.Count; i++)
         {
             AC.Open(Files[i]);
@@ -114,10 +129,16 @@ class Program
                     Console.ResetColor();
                 }
                 
+                // If the token got cancelled, exit
+                if (cts.IsCancellationRequested) break;
+                
                 Thread.Sleep(50);
             }
             
             AC.Close();
+
+            // If the token got cancelled, exit
+            if (cts.IsCancellationRequested) break;
 
             // To make it loop
             if (isLoop) i--;
@@ -127,7 +148,8 @@ class Program
         Console.CursorVisible = true;
     }
     static void HandleSIGINT(object source, ConsoleCancelEventArgs e) {
-        e.Cancel = false;
+        e.Cancel = true;
+        cts.Cancel();
         Console.CursorVisible = true;
     }
     static string BarGraph(double value, double maxValue, int width)

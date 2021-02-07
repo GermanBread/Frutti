@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DiscordRichPresence" Version="1.0.175" />
     <PackageReference Include="ManagedBass" Version="3.0.0" />
     <None Include="*" />
     <PackageReference Include="ppy.osu.Framework.NativeLibs" Version="2021.115.0" />
