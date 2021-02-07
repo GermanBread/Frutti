@@ -616,9 +616,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj",
-      "projectName": "BassTest",
-      "projectPath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj",
+      "projectUniqueName": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/Frutti.csproj",
+      "projectName": "Frutti",
+      "projectPath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/Frutti.csproj",
       "packagesPath": "/home/mathisj/.nuget/packages/",
       "outputPath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/obj/",
       "projectStyle": "PackageReference",

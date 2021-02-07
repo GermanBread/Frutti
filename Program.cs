@@ -14,6 +14,9 @@ using UnsignedFramework;
 
 class Program
 {
+    /*
+        Note: This code is a complete mess
+    */
     public static List<string> errors = new List<string> { };
     private static CancellationTokenSource cts = new CancellationTokenSource();
     private static RPC rpc = new RPC();
