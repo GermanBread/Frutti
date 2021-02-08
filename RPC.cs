@@ -12,31 +12,27 @@ namespace UnsignedFramework
     public class RPC
     {
         private DiscordRpcClient client;
-        private CancellationTokenSource tokenSource;
 
-        public RPC() {
-            tokenSource = new CancellationTokenSource();
-        }
+        public RPC() { }
         
         public async Task Start() {
             client = new DiscordRpcClient("808109065930407958");
 
-            //Set the logger
-	        client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
+            // Supress everything
+	        client.Logger = new ConsoleLogger() { Level = LogLevel.None };
 
             client.Initialize();
             
             await Task.Delay(0);
         }
         public async Task Stop() {
-            tokenSource.Cancel();
             client.Deinitialize();
             client.Dispose();
 
             await Task.Delay(0);
         }
         public async Task SetSong(AudioClip clip) {
-            //Call this as many times as you want and anywhere in your code.
+            // Call this as many times as you want and anywhere in your code.
             client.SetPresence(new RichPresence()
             {
                 Details = $"Playing: {clip.FileName}",
