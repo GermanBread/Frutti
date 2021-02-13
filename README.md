@@ -24,8 +24,7 @@ Windows:
 
 Requirements:
 
-* `.NET 5 SDK`
-* An IDE
+* .NET 5 SDK
 
 Preparation:
 
