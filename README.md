@@ -19,3 +19,22 @@ Windows:
 * `.\Frutti.exe`
 * `.\Frutti.exe \path\to\directory`
 * `.\Frutti.exe \path\to\file (will loop that file)`
+
+## Compiling from source
+
+Requirements:
+
+* `.NET 5 SDK`
+* An IDE
+
+Preparation:
+
+* git clone this repository / download the .zip
+
+Running:
+
+* `dotnet run`
+
+Compiling:
+
+* `dotnet build -o build`

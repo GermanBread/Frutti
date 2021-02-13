@@ -68,7 +68,7 @@ class Program
                 string playbackName = new string(AC.FileName.Take(Console.WindowWidth - playbackPrefix.Length).ToArray());
                 string playbackProgress = $" [{Math.Round(AC.ClipPosition * 10) / 10 + "s", -5}/{Math.Round(AC.ClipLength * 10) / 10 + "s", -5}]";
             
-                Console.Clear();
+                //Console.Clear();
                 Console.SetCursorPosition(0, 0);
                 
                 Console.ForegroundColor = ConsoleColor.White;
@@ -113,6 +113,7 @@ class Program
                     try {
                         Console.Write(new string(' ', Console.WindowWidth - prefix.Length - shortenedName.Length - suffix.Length));
                     } catch { }
+                    Console.CursorLeft = Console.WindowWidth - suffix.Length;
                     Console.WriteLine(suffix);
                     Console.ResetColor();
                 }
