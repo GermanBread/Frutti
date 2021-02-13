@@ -1,4 +1,5 @@
-﻿// System
+﻿using System.Data;
+// System
 using System;
 using System.IO;
 using System.Linq;
@@ -33,7 +34,7 @@ class Program
         if (Directory.Exists(MusicPath)) {
             Files.AddRange(Directory.GetFiles(MusicPath, "*", SearchOption.AllDirectories).Where(a => Bass.SupportedFormats.Contains(Path.GetExtension(a))));
             Files.Shuffle();
-        } else {
+        } else if (File.Exists(MusicPath)) {
             Files.Add(MusicPath);
             isLoop = true;
         }
@@ -68,6 +69,7 @@ class Program
                 string playbackProgress = $" [{Math.Round(AC.ClipPosition * 10) / 10 + "s", -5}/{Math.Round(AC.ClipLength * 10) / 10 + "s", -5}]";
             
                 Console.Clear();
+                Console.SetCursorPosition(0, 0);
                 
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.BackgroundColor = ConsoleColor.DarkGray;
@@ -76,7 +78,7 @@ class Program
                 Console.Write(playbackPrefix);
                 Console.Write(playbackName);
                 try {
-                    Console.CursorLeft = Console.WindowWidth - playbackProgress.Length;
+                    Console.Write(new string(' ', Console.WindowWidth - playbackPrefix.Length - playbackName.Length - playbackProgress.Length));
                 } catch { }
                 Console.WriteLine(playbackProgress);
                 
@@ -87,7 +89,8 @@ class Program
                 }
                 
                 if (Files.Count > 1 + i)
-                    Console.WriteLine("\nQueue: ");
+                    Console.WriteLine(new string(' ', Console.WindowWidth));
+                    Console.WriteLine("Queue:" + new string(' ', Console.WindowWidth - 6));
                 for (var index = i; index < Math.Clamp(Files.Count, 0, 6 + i); index++)
                 {
                     if (DateTime.Now.Millisecond / 100 == index - 1)
@@ -100,16 +103,17 @@ class Program
                     
                     string prefix = $"{index - i}: ";
                     string name = Path.GetFileNameWithoutExtension(Files[index]);
-                    string extension = Path.GetExtension(Files[index]).ToUpper();
+                    string suffix = $"[{Path.GetExtension(Files[index]).ToUpper()}]";
+                    string shortenedName = new string(name.Take(Console.WindowWidth - prefix.Length - suffix.Length).ToArray());
                     
                     Console.Write(prefix);
                     Console.ResetColor();
                     
-                    Console.Write(new string(name.Take(Console.WindowWidth - extension.Length - 2 - prefix.Length).ToArray()));
+                    Console.Write(shortenedName);
                     try {
-                        Console.CursorLeft = Console.WindowWidth - extension.Length - 2;
+                        Console.Write(new string(' ', Console.WindowWidth - prefix.Length - shortenedName.Length - suffix.Length));
                     } catch { }
-                    Console.WriteLine($"[{extension}]");
+                    Console.WriteLine(suffix);
                     Console.ResetColor();
                 }
                 
