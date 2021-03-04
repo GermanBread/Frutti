@@ -15,15 +15,20 @@ namespace UnsignedFramework
 
         public RPC() { }
         
-        public async Task Start() {
+        public async Task<bool> Start() {
             client = new DiscordRpcClient("808109065930407958");
 
             // Supress everything
 	        client.Logger = new ConsoleLogger() { Level = LogLevel.None };
 
-            client.Initialize();
+            int retryCount = 0;
+            while (!client.Initialize()) {
+                await Task.Delay(500);
+                if (++retryCount > 5)
+                    return false;
+            }
             
-            await Task.Delay(0);
+            return true;
         }
         public async Task Stop() {
             client.Deinitialize();

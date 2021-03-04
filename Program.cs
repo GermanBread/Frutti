@@ -50,7 +50,8 @@ class Program
         }
         new TaskFactory().StartNew(async ()
          => {
-                await rpc.Start();
+                // Connection was not successful, don't bother trying again
+                if (!await rpc.Start()) return;
                 while (!cts.IsCancellationRequested)
                 {
                     await rpc.SetSong(AC);
