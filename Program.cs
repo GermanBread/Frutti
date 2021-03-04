@@ -93,6 +93,8 @@ class Program
                     if (DateTime.Now.Second % 2 < 1) Console.ForegroundColor = ConsoleColor.White;
                     else Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine("LOOP");
+                    // If the token got cancelled, exit
+                    if (cts.IsCancellationRequested) break;
                     continue;
                 }
                 

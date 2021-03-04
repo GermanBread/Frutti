@@ -272,7 +272,7 @@
         }
       }
     },
-    "net5.0/linux-x64": {
+    "net5.0/win-x64": {
       "DiscordRichPresence/1.0.175": {
         "type": "package",
         "dependencies": {
@@ -332,7 +332,7 @@
           "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
+          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         }
       },
       "Newtonsoft.Json/12.0.2": {
@@ -353,8 +353,16 @@
           "lib/net5.0/_._": {}
         },
         "native": {
-          "runtimes/linux-x64/native/libbass.so": {},
-          "runtimes/linux-x64/native/libbass_fx.so": {}
+          "runtimes/win-x64/native/avcodec-58.dll": {},
+          "runtimes/win-x64/native/avdevice-58.dll": {},
+          "runtimes/win-x64/native/avfilter-7.dll": {},
+          "runtimes/win-x64/native/avformat-58.dll": {},
+          "runtimes/win-x64/native/avutil-56.dll": {},
+          "runtimes/win-x64/native/bass.dll": {},
+          "runtimes/win-x64/native/bass_fx.dll": {},
+          "runtimes/win-x64/native/postproc-55.dll": {},
+          "runtimes/win-x64/native/swresample-3.dll": {},
+          "runtimes/win-x64/native/swscale-5.dll": {}
         }
       },
       "System.Security.AccessControl/4.5.0": {
@@ -367,7 +375,7 @@
           "ref/netstandard2.0/System.Security.AccessControl.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Security.AccessControl.dll": {}
+          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {}
         }
       },
       "System.Security.Principal.Windows/4.5.0": {
@@ -379,7 +387,7 @@
           "ref/netstandard2.0/System.Security.Principal.Windows.dll": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {}
+          "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {}
         }
       }
     }
@@ -755,11 +763,15 @@
             "version": "[5.0.0, 5.0.0]"
           },
           {
-            "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
             "version": "[5.0.3, 5.0.3]"
           },
           {
-            "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.3, 5.0.3]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
             "version": "[5.0.3, 5.0.3]"
           }
         ],
@@ -772,7 +784,7 @@
       }
     },
     "runtimes": {
-      "linux-x64": {
+      "win-x64": {
         "#import": []
       }
     }
