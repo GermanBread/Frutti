@@ -15,6 +15,15 @@
           "lib/netstandard2.0/DiscordRPC.dll": {}
         }
       },
+      "FftSharp/1.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FftSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FftSharp.dll": {}
+        }
+      },
       "ManagedBass/3.0.0": {
         "type": "package",
         "compile": {
@@ -22,6 +31,15 @@
         },
         "runtime": {
           "lib/netstandard1.4/ManagedBass.dll": {}
+        }
+      },
+      "MathNet.Numerics/4.15.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.0.0": {
@@ -254,7 +272,7 @@
         }
       }
     },
-    "net5.0/win-x64": {
+    "net5.0/linux-x64": {
       "DiscordRichPresence/1.0.175": {
         "type": "package",
         "dependencies": {
@@ -268,6 +286,15 @@
           "lib/netstandard2.0/DiscordRPC.dll": {}
         }
       },
+      "FftSharp/1.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FftSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FftSharp.dll": {}
+        }
+      },
       "ManagedBass/3.0.0": {
         "type": "package",
         "compile": {
@@ -275,6 +302,15 @@
         },
         "runtime": {
           "lib/netstandard1.4/ManagedBass.dll": {}
+        }
+      },
+      "MathNet.Numerics/4.15.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.0.0": {
@@ -296,7 +332,7 @@
           "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         },
         "runtime": {
-          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
+          "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         }
       },
       "Newtonsoft.Json/12.0.2": {
@@ -317,16 +353,8 @@
           "lib/net5.0/_._": {}
         },
         "native": {
-          "runtimes/win-x64/native/avcodec-58.dll": {},
-          "runtimes/win-x64/native/avdevice-58.dll": {},
-          "runtimes/win-x64/native/avfilter-7.dll": {},
-          "runtimes/win-x64/native/avformat-58.dll": {},
-          "runtimes/win-x64/native/avutil-56.dll": {},
-          "runtimes/win-x64/native/bass.dll": {},
-          "runtimes/win-x64/native/bass_fx.dll": {},
-          "runtimes/win-x64/native/postproc-55.dll": {},
-          "runtimes/win-x64/native/swresample-3.dll": {},
-          "runtimes/win-x64/native/swscale-5.dll": {}
+          "runtimes/linux-x64/native/libbass.so": {},
+          "runtimes/linux-x64/native/libbass_fx.so": {}
         }
       },
       "System.Security.AccessControl/4.5.0": {
@@ -339,7 +367,7 @@
           "ref/netstandard2.0/System.Security.AccessControl.dll": {}
         },
         "runtime": {
-          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {}
+          "lib/netstandard2.0/System.Security.AccessControl.dll": {}
         }
       },
       "System.Security.Principal.Windows/4.5.0": {
@@ -351,7 +379,7 @@
           "ref/netstandard2.0/System.Security.Principal.Windows.dll": {}
         },
         "runtime": {
-          "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {}
+          "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {}
         }
       }
     }
@@ -374,6 +402,19 @@
         "lib/netstandard2.0/DiscordRPC.xml"
       ]
     },
+    "FftSharp/1.0.8": {
+      "sha512": "2BBjc8GeffzIsRRI1UTL0TRVRqXc/Xwb3pqA4vR+PIOwcq5M+5A4Tw2U46IeeqMEr4kv3l35gnWTekq/e+RYAA==",
+      "type": "package",
+      "path": "fftsharp/1.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fftsharp.1.0.8.nupkg.sha512",
+        "fftsharp.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/FftSharp.dll"
+      ]
+    },
     "ManagedBass/3.0.0": {
       "sha512": "ieVHpRzSVJO5MQvSE2qlGhNrDdLPYFkkpqeNc6DJdGtQI/LP4uiMkzHX8sDUy8yF5u2Eg2aLrPvbF8+XKBfBgQ==",
       "type": "package",
@@ -389,6 +430,26 @@
         "lib/netstandard1.4/ManagedBass.xml",
         "managedbass.3.0.0.nupkg.sha512",
         "managedbass.nuspec"
+      ]
+    },
+    "MathNet.Numerics/4.15.0": {
+      "sha512": "cP4QgPPiU7boMyL8npvuQyVGVYUd/JQY1AWa+Wl2f//fuJN40qwt9ABRazunZIcDLHg3SSlgD/e+3Lnp69jNTg==",
+      "type": "package",
+      "path": "mathnet.numerics/4.15.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net40/MathNet.Numerics.dll",
+        "lib/net40/MathNet.Numerics.xml",
+        "lib/net461/MathNet.Numerics.dll",
+        "lib/net461/MathNet.Numerics.xml",
+        "lib/netstandard1.3/MathNet.Numerics.dll",
+        "lib/netstandard1.3/MathNet.Numerics.xml",
+        "lib/netstandard2.0/MathNet.Numerics.dll",
+        "lib/netstandard2.0/MathNet.Numerics.xml",
+        "mathnet.numerics.4.15.0.nupkg.sha512",
+        "mathnet.numerics.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
@@ -614,24 +675,26 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "DiscordRichPresence >= 1.0.175",
+      "FftSharp >= 1.0.8",
       "ManagedBass >= 3.0.0",
+      "MathNet.Numerics >= 4.15.0",
       "ppy.osu.Framework.NativeLibs >= 2021.115.0"
     ]
   },
   "packageFolders": {
-    "/home/mathisj/.nuget/packages/": {}
+    "/home/unsigned-bool/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/Frutti.csproj",
+      "projectUniqueName": "/home/unsigned-bool/Dokumente/Kodeing/C#/BASS/Frutti/Frutti.csproj",
       "projectName": "Frutti",
-      "projectPath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/Frutti.csproj",
-      "packagesPath": "/home/mathisj/.nuget/packages/",
-      "outputPath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/obj/",
+      "projectPath": "/home/unsigned-bool/Dokumente/Kodeing/C#/BASS/Frutti/Frutti.csproj",
+      "packagesPath": "/home/unsigned-bool/.nuget/packages/",
+      "outputPath": "/home/unsigned-bool/Dokumente/Kodeing/C#/BASS/Frutti/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/mathisj/.nuget/NuGet/NuGet.Config"
+        "/home/unsigned-bool/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -659,9 +722,17 @@
             "target": "Package",
             "version": "[1.0.175, )"
           },
+          "FftSharp": {
+            "target": "Package",
+            "version": "[1.0.8, )"
+          },
           "ManagedBass": {
             "target": "Package",
             "version": "[3.0.0, )"
+          },
+          "MathNet.Numerics": {
+            "target": "Package",
+            "version": "[4.15.0, )"
           },
           "ppy.osu.Framework.NativeLibs": {
             "target": "Package",
@@ -684,16 +755,12 @@
             "version": "[5.0.0, 5.0.0]"
           },
           {
-            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[5.0.2, 5.0.2]"
+            "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+            "version": "[5.0.3, 5.0.3]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.2, 5.0.2]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[5.0.2, 5.0.2]"
+            "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+            "version": "[5.0.3, 5.0.3]"
           }
         ],
         "frameworkReferences": {
@@ -701,11 +768,11 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
-      "win-x64": {
+      "linux-x64": {
         "#import": []
       }
     }

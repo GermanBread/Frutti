@@ -1,5 +1,4 @@
-﻿using System.Data;
-// System
+﻿// System
 using System;
 using System.IO;
 using System.Linq;
@@ -13,6 +12,9 @@ using ManagedBass;
 // Unsigned Framework
 using UnsignedFramework;
 
+// FFT
+using FftSharp;
+
 class Program
 {
     /*
@@ -21,6 +23,7 @@ class Program
     public static List<string> errors = new List<string> { };
     private static CancellationTokenSource cts = new CancellationTokenSource();
     private static RPC rpc = new RPC();
+    private static int refreshCounter = 0;
     static void Main(string[] args)
     {
         Console.CancelKeyPress += new ConsoleCancelEventHandler(HandleSIGINT);
@@ -64,6 +67,9 @@ class Program
 
             while (AC.ClipStatus != PlaybackState.Stopped)
             {
+                if (refreshCounter == 0) Console.Clear();
+                refreshCounter = ++refreshCounter % 25;
+                
                 string playbackPrefix = "Now playing: ";
                 string playbackName = new string(AC.FileName.Take(Console.WindowWidth - playbackPrefix.Length).ToArray());
                 string playbackProgress = $" [{Math.Round(AC.ClipPosition * 10) / 10 + "s", -5}/{Math.Round(AC.ClipLength * 10) / 10 + "s", -5}]";
@@ -86,6 +92,7 @@ class Program
                     if (DateTime.Now.Second % 2 < 1) Console.ForegroundColor = ConsoleColor.White;
                     else Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine("LOOP");
+                    continue;
                 }
                 
                 if (Files.Count > 1 + i)
@@ -116,6 +123,30 @@ class Program
                     Console.CursorLeft = Console.WindowWidth - suffix.Length;
                     Console.WriteLine(suffix);
                     Console.ResetColor();
+
+                    /*// a 30ms window in bytes to be filled with sample data
+                    int length = (int)Bass.ChannelSeconds2Bytes(AC.Handle, 0.03);
+
+                    // first we need a mananged object where the sample data should be placed
+                    // length is in bytes, so the number of floats to process is length/4 
+                    float[] data = new float[length/4];
+
+                    // get the sample data
+                    length = Bass.ChannelGetData(AC.Handle, data, length);
+
+                    FftSharp.Complex[] complex;
+                    double[] fft = Array.ConvertAll<float, double>(data, x
+                     => (double)x);
+                    
+                    complex = FftSharp.Complex.FromReal(fft);
+
+                    FftSharp.Transform.IFFT(complex);
+
+                    Array.ForEach(complex, x
+                     => Console.WriteLine(x.Magnitude));
+
+                    // It's something 
+                    */
                 }
                 
                 if (errors.Count > 0)
@@ -151,6 +182,11 @@ class Program
             // To make it loop
             if (isLoop) i--;
         }
+        
+        // Free up memory
+        Bass.Stop();
+        Bass.Free();
+        
         Console.WriteLine("Exit");
 
         Console.CursorVisible = true;
