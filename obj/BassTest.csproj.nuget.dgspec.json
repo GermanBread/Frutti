@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj": {}
+    "/home/unsigned-bool/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj": {}
   },
   "projects": {
-    "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj": {
+    "/home/unsigned-bool/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj",
+        "projectUniqueName": "/home/unsigned-bool/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj",
         "projectName": "BassTest",
-        "projectPath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj",
-        "packagesPath": "/home/mathisj/.nuget/packages/",
-        "outputPath": "/home/mathisj/Dokumente/Kodeing/C#/BASS/Frutti/obj/",
+        "projectPath": "/home/unsigned-bool/Dokumente/Kodeing/C#/BASS/Frutti/BassTest.csproj",
+        "packagesPath": "/home/unsigned-bool/.nuget/packages/",
+        "outputPath": "/home/unsigned-bool/Dokumente/Kodeing/C#/BASS/Frutti/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/mathisj/.nuget/NuGet/NuGet.Config"
+          "/home/unsigned-bool/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

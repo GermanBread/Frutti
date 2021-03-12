@@ -29,9 +29,22 @@ class Program
         Console.CancelKeyPress += new ConsoleCancelEventHandler(HandleSIGINT);
         
         Console.CursorVisible = false;
+
+        int _argOffset = 0;
+        bool _clearConsole = true;
+        if (args.Contains("--help") || args.Contains("-h")) {
+            Console.WriteLine("Fruti made by GermanBRead#9077");
+            Console.WriteLine("\t-h / --help = this help");
+            Console.WriteLine("\t--noclear = prevent console from being cleared (fixes flicker but causes issues when console window is resized)");
+            return;
+        }
+        if (args.Contains("--noclear")) {
+            _argOffset++;
+            _clearConsole = false;
+        }
         
         bool isLoop = false;
-        string MusicPath = args.Length > 0 ? args[0] : Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+        string MusicPath = args.Length > _argOffset ? args[_argOffset] : Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
         List<string> Files = new List<string> { };
         
         if (Directory.Exists(MusicPath)) {
@@ -68,14 +81,13 @@ class Program
 
             while (AC.ClipStatus != PlaybackState.Stopped)
             {
-                if (refreshCounter == 0) Console.Clear();
-                refreshCounter = ++refreshCounter % 25;
-                
                 string playbackPrefix = "Now playing: ";
                 string playbackName = new string(AC.FileName.Take(Console.WindowWidth - playbackPrefix.Length).ToArray());
                 string playbackProgress = $" [{Math.Round(AC.ClipPosition * 10) / 10 + "s", -5}/{Math.Round(AC.ClipLength * 10) / 10 + "s", -5}]";
+
+                refreshCounter = ++refreshCounter % 25;
+                if (refreshCounter == 0 && _clearConsole) Console.Clear();
             
-                //Console.Clear();
                 Console.SetCursorPosition(0, 0);
                 
                 Console.ForegroundColor = ConsoleColor.White;
