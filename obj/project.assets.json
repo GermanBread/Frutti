@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/unsigned-bool/Dokumente/Kodeing/C#/BASS/Frutti/Frutti.csproj",
+      "projectUniqueName": "/home/unsigned-bool/Dokumente/Kodeing/C#/Finished or Cancelled Projects/Frutti/Frutti.csproj",
       "projectName": "Frutti",
-      "projectPath": "/home/unsigned-bool/Dokumente/Kodeing/C#/BASS/Frutti/Frutti.csproj",
+      "projectPath": "/home/unsigned-bool/Dokumente/Kodeing/C#/Finished or Cancelled Projects/Frutti/Frutti.csproj",
       "packagesPath": "/home/unsigned-bool/.nuget/packages/",
-      "outputPath": "/home/unsigned-bool/Dokumente/Kodeing/C#/BASS/Frutti/obj/",
+      "outputPath": "/home/unsigned-bool/Dokumente/Kodeing/C#/Finished or Cancelled Projects/Frutti/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/unsigned-bool/.nuget/NuGet/NuGet.Config"
@@ -756,11 +756,11 @@
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
-            "version": "[5.0.3, 5.0.3]"
+            "version": "[5.0.5, 5.0.5]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.linux-x64",
-            "version": "[5.0.3, 5.0.3]"
+            "version": "[5.0.5, 5.0.5]"
           }
         ],
         "frameworkReferences": {
@@ -768,7 +768,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

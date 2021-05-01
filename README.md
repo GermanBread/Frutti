@@ -1,5 +1,7 @@
 # Frutti CLI music player
 
+With Discord RPC
+
 ## How to download?
 
 See the releases tab!

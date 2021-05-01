@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DvjkfKnX3o0CRL774pCj2JbUpIq4mPION4rZD5BmX6uMjSHaxX/1+I35ReI/ZFWnVTgh2TuZPJItYQRHf9xDuQ==",
+  "dgSpecHash": "I3M/MxxKuInDkivWlUcrTWREzdY2rdByQcpPgjEc9tF/srIwez2/TwmAfGJU3QNHnkx1+wnP/90r5xqyuW2ZEg==",
   "success": true,
-  "projectFilePath": "/home/unsigned-bool/Dokumente/Kodeing/C#/BASS/Frutti/Frutti.csproj",
+  "projectFilePath": "/home/unsigned-bool/Dokumente/Kodeing/C#/Finished or Cancelled Projects/Frutti/Frutti.csproj",
   "expectedPackageFiles": [
     "/home/unsigned-bool/.nuget/packages/discordrichpresence/1.0.175/discordrichpresence.1.0.175.nupkg.sha512",
     "/home/unsigned-bool/.nuget/packages/fftsharp/1.0.8/fftsharp.1.0.8.nupkg.sha512",
@@ -14,8 +14,8 @@
     "/home/unsigned-bool/.nuget/packages/ppy.osu.framework.nativelibs/2021.115.0/ppy.osu.framework.nativelibs.2021.115.0.nupkg.sha512",
     "/home/unsigned-bool/.nuget/packages/system.security.accesscontrol/4.5.0/system.security.accesscontrol.4.5.0.nupkg.sha512",
     "/home/unsigned-bool/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512",
-    "/home/unsigned-bool/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/5.0.3/microsoft.netcore.app.runtime.linux-x64.5.0.3.nupkg.sha512",
-    "/home/unsigned-bool/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/5.0.3/microsoft.aspnetcore.app.runtime.linux-x64.5.0.3.nupkg.sha512",
+    "/home/unsigned-bool/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/5.0.5/microsoft.netcore.app.runtime.linux-x64.5.0.5.nupkg.sha512",
+    "/home/unsigned-bool/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/5.0.5/microsoft.aspnetcore.app.runtime.linux-x64.5.0.5.nupkg.sha512",
     "/home/unsigned-bool/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
