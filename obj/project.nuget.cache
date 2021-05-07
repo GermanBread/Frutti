@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "I3M/MxxKuInDkivWlUcrTWREzdY2rdByQcpPgjEc9tF/srIwez2/TwmAfGJU3QNHnkx1+wnP/90r5xqyuW2ZEg==",
+  "dgSpecHash": "1hEIKslrjIsQqhMi4KtE146yhPxmBehYlqr2h164zxQdloS3eHQPLkfQy5xQUDbrL/0vf8eJtklyEi7UwLGcjw==",
   "success": true,
   "projectFilePath": "/home/unsigned-bool/Dokumente/Kodeing/C#/Finished or Cancelled Projects/Frutti/Frutti.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "/home/unsigned-bool/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512",
     "/home/unsigned-bool/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/5.0.5/microsoft.netcore.app.runtime.linux-x64.5.0.5.nupkg.sha512",
     "/home/unsigned-bool/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/5.0.5/microsoft.aspnetcore.app.runtime.linux-x64.5.0.5.nupkg.sha512",
+    "/home/unsigned-bool/.nuget/packages/microsoft.netcore.app.host.linux-x64/5.0.5/microsoft.netcore.app.host.linux-x64.5.0.5.nupkg.sha512",
     "/home/unsigned-bool/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []

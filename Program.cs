@@ -67,7 +67,7 @@ class Program
                 if (!await rpc.Start()) return;
                 while (!cts.IsCancellationRequested)
                 {
-                    await rpc.SetSong(AC);
+                    await rpc.SetSong(AC, isLoop);
                     await Task.Delay(1000);
                 }
                 await rpc.Stop();

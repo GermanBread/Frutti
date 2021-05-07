@@ -759,6 +759,10 @@
             "version": "[5.0.5, 5.0.5]"
           },
           {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[5.0.5, 5.0.5]"
+          },
+          {
             "name": "Microsoft.NETCore.App.Runtime.linux-x64",
             "version": "[5.0.5, 5.0.5]"
           }
