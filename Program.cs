@@ -32,15 +32,21 @@ class Program
 
         int _argOffset = 0;
         bool _clearConsole = true;
+        bool _aggressiveClear = false;
         if (args.Contains("--help") || args.Contains("-h")) {
             Console.WriteLine("Fruti made by GermanBRead#9077");
             Console.WriteLine("\t-h / --help = this help");
             Console.WriteLine("\t--noclear = prevent console from being cleared (fixes flicker but causes issues when console window is resized)");
+            Console.WriteLine("\t--aggressive-clear = aggressively clear the console buffer on every draw (causes a lot of flicker if you don't use a hardware accelerated terminal)");
             return;
         }
         if (args.Contains("--noclear")) {
             _argOffset++;
             _clearConsole = false;
+        }
+        if (args.Contains("--aggressive-clear")) {
+            _argOffset++;
+            _aggressiveClear = true;
         }
         
         bool isLoop = false;
@@ -82,11 +88,12 @@ class Program
             while (AC.ClipStatus != PlaybackState.Stopped)
             {
                 string playbackPrefix = "Now playing: ";
-                string playbackName = new string(AC.FileName.Take(Console.WindowWidth - playbackPrefix.Length).ToArray());
+                string playbackName = new string(AC.FileName.Take(Console.WindowWidth - playbackPrefix.Length).ToArray()).Trim();
                 string playbackProgress = $" [{Math.Round(AC.ClipPosition * 10) / 10 + "s", -5}/{Math.Round(AC.ClipLength * 10) / 10 + "s", -5}]";
 
                 refreshCounter = ++refreshCounter % 25;
                 if (refreshCounter == 0 && _clearConsole) Console.Clear();
+                else if (_aggressiveClear) Console.Clear();
             
                 Console.SetCursorPosition(0, 0);
                 
@@ -134,8 +141,8 @@ class Program
                     Console.Write(shortenedName);
                     try {
                         Console.Write(new string(' ', Console.WindowWidth - prefix.Length - shortenedName.Length - suffix.Length));
+                        Console.CursorLeft = Console.WindowWidth - suffix.Length;
                     } catch { }
-                    Console.CursorLeft = Console.WindowWidth - suffix.Length;
                     Console.WriteLine(suffix);
                     Console.ResetColor();
 
