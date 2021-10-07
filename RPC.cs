@@ -1,22 +1,18 @@
 // System
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 
 // DiscordRPC
 using DiscordRPC;
 using DiscordRPC.Logging;
 
-namespace UnsignedFramework
-{
-    public class RPC
-    {
+namespace FruttiReborn {
+    public class RPCClient {
         private DiscordRpcClient client;
 
-        public RPC() { }
-        
         public async Task<bool> Start() {
-            client = new DiscordRpcClient("808109065930407958");
+            // If you abuse this I'm going to kill you :)
+            client = new("808109065930407958");
 
             // Supress everything
 	        client.Logger = new ConsoleLogger() { Level = LogLevel.None };
@@ -36,10 +32,9 @@ namespace UnsignedFramework
 
             await Task.Delay(0);
         }
-        public async Task SetSong(AudioClip clip, bool isLoop) {
+        public async Task SetSong(Audio clip, bool isLoop) {
             // Call this as many times as you want and anywhere in your code.
-            client.SetPresence(new RichPresence()
-            {
+            client.SetPresence(new RichPresence() {
                 Details = $"Playing: {clip.FileName}" + (isLoop ? "on repeat" : ""),
                 Timestamps = !isLoop ? new Timestamps {
                     Start = DateTime.UtcNow.Subtract(new TimeSpan(0, 0, 0, (int)Math.Round(clip.ClipPosition))),

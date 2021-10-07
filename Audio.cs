@@ -4,42 +4,55 @@ using System.IO;
 using System;
 using ManagedBass;
 
-namespace UnsignedFramework
-{
-    public class AudioClip {
+namespace FruttiReborn {
+    public class Audio {
         public int Handle { get; private set; }
         public string FilePath { get; private set; }
         public string FileName { get {
             return Path.GetFileName(FilePath);
         } }
         public double ClipPosition { get {
-            long BytePosition = Bass.ChannelGetPosition(Handle);
-            if (BytePosition == -1)
-                throw new BassException { };
-            double SecondsPosition = Bass.ChannelBytes2Seconds(Handle, BytePosition);
-            if (SecondsPosition < 0)
-                throw new BassException { };
-            return SecondsPosition;
+            long _bytePosition = Bass.ChannelGetPosition(Handle);
+            if (_bytePosition == -1)
+                return 0;
+            double _secondsPosition = Bass.ChannelBytes2Seconds(Handle, _bytePosition);
+            if (_secondsPosition < 0)
+                return 0;
+            return _secondsPosition;
         } set {
-            long BytePosition = Bass.ChannelSeconds2Bytes(Handle, value);
-            if (BytePosition == -1)
+            long _bytePosition = Bass.ChannelSeconds2Bytes(Handle, value);
+            if (_bytePosition == -1)
                 throw new BassException { };
-            if (!Bass.ChannelSetPosition(Handle, BytePosition))
+            if (!Bass.ChannelSetPosition(Handle, _bytePosition))
                 throw new BassException { };
         } }
         public double ClipLength { get {
-            long BytePosition = Bass.ChannelGetLength(Handle);
-            if (BytePosition == -1)
-                throw new BassException { };
-            double SecondsPosition = Bass.ChannelBytes2Seconds(Handle, BytePosition);
-            if (SecondsPosition < 0)
-                throw new BassException { };
-            return SecondsPosition;
+            long _bytePosition = Bass.ChannelGetLength(Handle);
+            if (_bytePosition == -1)
+                return 1;
+            double _secondsPosition = Bass.ChannelBytes2Seconds(Handle, _bytePosition);
+            if (_secondsPosition < 0)
+                return 1;
+            return _secondsPosition;
         } }
         public PlaybackState ClipStatus { get {
             return Bass.ChannelIsActive(Handle);
         } }
-        public AudioClip() {
+        public double[] Waveform { get {
+            int[] _data = new int[256 * 2];
+            _ = Bass.ChannelGetData(Handle, _data, _data.Length);
+
+            //double _low = _data.Aggregate((val, agg) => val < agg ? val : agg);
+            double _peak = _data.Aggregate((val, agg) => val > agg ? val : agg);
+
+            return Array.ConvertAll<int, double>(_data[..256], x
+             => {
+                 double _output = Math.Clamp(Math.Abs((double)x / _peak), 0, 1);
+                 return double.IsNaN(_output) ? 0 : _output;
+             }
+             );
+        } }
+        public Audio() {
             if (Bass.Init())
                 return;
             else
@@ -52,7 +65,8 @@ namespace UnsignedFramework
             FilePath = Path.GetFullPath(File);
         }
         public void Replace(string File) {
-            Close();
+            if (Handle != 0)
+                Close();
             Open(File);
         }
         public void Play() {

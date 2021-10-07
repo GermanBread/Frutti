@@ -8,21 +8,12 @@ See the releases tab!
 
 ## How to use?
 
-**Linux:**
-
-Preparation:
+For UNIX and UNIX-like OSes:
  * `chmod +x ./Frutti`
 
-To run Frutti:
+To run Frutti (on Windows just use \ instead of /):
  * `./Frutti`
- * `./Frutti /path/to/directory`
- * `./Frutti /path/to/file (will loop that file)`
-
-**Windows:**
-
- * `.\Frutti.exe`
- * `.\Frutti.exe \path\to\directory`
- * `.\Frutti.exe \path\to\file (will loop that file)`
+ * `./Frutti <path to files or directories>`at file)`
 
 ## Compiling from source
 

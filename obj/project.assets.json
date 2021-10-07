@@ -15,15 +15,6 @@
           "lib/netstandard2.0/DiscordRPC.dll": {}
         }
       },
-      "FftSharp/1.0.8": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/FftSharp.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/FftSharp.dll": {}
-        }
-      },
       "ManagedBass/3.0.0": {
         "type": "package",
         "compile": {
@@ -31,15 +22,6 @@
         },
         "runtime": {
           "lib/netstandard1.4/ManagedBass.dll": {}
-        }
-      },
-      "MathNet.Numerics/4.15.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/MathNet.Numerics.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/MathNet.Numerics.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.0.0": {
@@ -72,6 +54,15 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "NetCurses/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.0/NetCursesLib.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/NetCursesLib.dll": {}
         }
       },
       "Newtonsoft.Json/12.0.2": {
@@ -286,15 +277,6 @@
           "lib/netstandard2.0/DiscordRPC.dll": {}
         }
       },
-      "FftSharp/1.0.8": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/FftSharp.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/FftSharp.dll": {}
-        }
-      },
       "ManagedBass/3.0.0": {
         "type": "package",
         "compile": {
@@ -302,15 +284,6 @@
         },
         "runtime": {
           "lib/netstandard1.4/ManagedBass.dll": {}
-        }
-      },
-      "MathNet.Numerics/4.15.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/MathNet.Numerics.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/MathNet.Numerics.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.0.0": {
@@ -333,6 +306,15 @@
         },
         "runtime": {
           "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
+        }
+      },
+      "NetCurses/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.0/NetCursesLib.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/NetCursesLib.dll": {}
         }
       },
       "Newtonsoft.Json/12.0.2": {
@@ -402,19 +384,6 @@
         "lib/netstandard2.0/DiscordRPC.xml"
       ]
     },
-    "FftSharp/1.0.8": {
-      "sha512": "2BBjc8GeffzIsRRI1UTL0TRVRqXc/Xwb3pqA4vR+PIOwcq5M+5A4Tw2U46IeeqMEr4kv3l35gnWTekq/e+RYAA==",
-      "type": "package",
-      "path": "fftsharp/1.0.8",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fftsharp.1.0.8.nupkg.sha512",
-        "fftsharp.nuspec",
-        "icon.png",
-        "lib/netstandard2.0/FftSharp.dll"
-      ]
-    },
     "ManagedBass/3.0.0": {
       "sha512": "ieVHpRzSVJO5MQvSE2qlGhNrDdLPYFkkpqeNc6DJdGtQI/LP4uiMkzHX8sDUy8yF5u2Eg2aLrPvbF8+XKBfBgQ==",
       "type": "package",
@@ -430,26 +399,6 @@
         "lib/netstandard1.4/ManagedBass.xml",
         "managedbass.3.0.0.nupkg.sha512",
         "managedbass.nuspec"
-      ]
-    },
-    "MathNet.Numerics/4.15.0": {
-      "sha512": "cP4QgPPiU7boMyL8npvuQyVGVYUd/JQY1AWa+Wl2f//fuJN40qwt9ABRazunZIcDLHg3SSlgD/e+3Lnp69jNTg==",
-      "type": "package",
-      "path": "mathnet.numerics/4.15.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/net40/MathNet.Numerics.dll",
-        "lib/net40/MathNet.Numerics.xml",
-        "lib/net461/MathNet.Numerics.dll",
-        "lib/net461/MathNet.Numerics.xml",
-        "lib/netstandard1.3/MathNet.Numerics.dll",
-        "lib/netstandard1.3/MathNet.Numerics.xml",
-        "lib/netstandard2.0/MathNet.Numerics.dll",
-        "lib/netstandard2.0/MathNet.Numerics.xml",
-        "mathnet.numerics.4.15.0.nupkg.sha512",
-        "mathnet.numerics.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
@@ -507,6 +456,18 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "NetCurses/1.0.0": {
+      "sha512": "IOWA1zOpQpxI85GqMxM8/zcvIrin81IrBZbmr6+nR748zAszr+yKVyPo5epQtvv+ntSMUhIdNH04Q8mOYYM08A==",
+      "type": "package",
+      "path": "netcurses/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp2.0/NetCursesLib.dll",
+        "netcurses.1.0.0.nupkg.sha512",
+        "netcurses.nuspec"
       ]
     },
     "Newtonsoft.Json/12.0.2": {
@@ -675,26 +636,25 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "DiscordRichPresence >= 1.0.175",
-      "FftSharp >= 1.0.8",
       "ManagedBass >= 3.0.0",
-      "MathNet.Numerics >= 4.15.0",
+      "NetCurses >= 1.0.0",
       "ppy.osu.Framework.NativeLibs >= 2021.115.0"
     ]
   },
   "packageFolders": {
-    "/home/unsigned-bool/.nuget/packages/": {}
+    "/home/ubool/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/unsigned-bool/Dokumente/Kodeing/C#/Finished or Cancelled Projects/Frutti/Frutti.csproj",
+      "projectUniqueName": "/home/ubool/Dokumente/Kodeing/C#/WIP/Frutti/Frutti.csproj",
       "projectName": "Frutti",
-      "projectPath": "/home/unsigned-bool/Dokumente/Kodeing/C#/Finished or Cancelled Projects/Frutti/Frutti.csproj",
-      "packagesPath": "/home/unsigned-bool/.nuget/packages/",
-      "outputPath": "/home/unsigned-bool/Dokumente/Kodeing/C#/Finished or Cancelled Projects/Frutti/obj/",
+      "projectPath": "/home/ubool/Dokumente/Kodeing/C#/WIP/Frutti/Frutti.csproj",
+      "packagesPath": "/home/ubool/.nuget/packages/",
+      "outputPath": "/home/ubool/Dokumente/Kodeing/C#/WIP/Frutti/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/unsigned-bool/.nuget/NuGet/NuGet.Config"
+        "/home/ubool/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -722,17 +682,13 @@
             "target": "Package",
             "version": "[1.0.175, )"
           },
-          "FftSharp": {
-            "target": "Package",
-            "version": "[1.0.8, )"
-          },
           "ManagedBass": {
             "target": "Package",
             "version": "[3.0.0, )"
           },
-          "MathNet.Numerics": {
+          "NetCurses": {
             "target": "Package",
-            "version": "[4.15.0, )"
+            "version": "[1.0.0, )"
           },
           "ppy.osu.Framework.NativeLibs": {
             "target": "Package",
@@ -751,20 +707,16 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
-            "version": "[5.0.5, 5.0.5]"
+            "version": "[5.0.8, 5.0.8]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[5.0.5, 5.0.5]"
+            "version": "[5.0.8, 5.0.8]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.linux-x64",
-            "version": "[5.0.5, 5.0.5]"
+            "version": "[5.0.8, 5.0.8]"
           }
         ],
         "frameworkReferences": {
@@ -772,7 +724,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.205/RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
