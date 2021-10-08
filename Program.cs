@@ -99,6 +99,13 @@ namespace FruttiReborn {
                 Stopwatch _watch = new();
                 _watch.Start();
 
+                Task.Run(async () => {
+                    while (!windowToken.IsCancellationRequested) {
+                        _ = rpc.SetSong(audio);
+                        await Task.Delay(1000);
+                    }
+                });
+
                 while (!windowToken.IsCancellationRequested) {
                     if (windowNeedsResize) {
                         Size _newconsoleSize = new(Console.WindowWidth, Console.WindowHeight);
@@ -178,7 +185,7 @@ namespace FruttiReborn {
                             }
                             _textMiddle = $"({bakeString(_soundPosition)} | {bakeString(_soundDuration)})";
                         }
-                        _textRight = $"[{Path.GetExtension(audio.FileName).ToUpper()}]";
+                        _textRight = $"[{Path.GetExtension(audio.FileName)}]";
                         {
                             double _fraction = Math.Max((consoleSize.Width - _textLeft.Length - _textRight.Length - _textMiddle.Length) / 2d, 0);
                             _sepLM  = new(' ', (int)Math.Floor(_fraction));
@@ -211,12 +218,13 @@ namespace FruttiReborn {
                             window.Foreground = foregroundColour;
                             window.AddString($"{Path.GetFileName(queue[(i + _counter) % queue.Count])}");
                             window.Move(new(2, window.CursorPosition.MoveDown().Y));
+
+                            if (window.CursorPosition.Y > consoleSize.Height)
+                                break;
                         }
                     }
 
                     updater.Update(window);
-
-                    _ = rpc.SetSong(audio, _args.Flags.HasFlag(FruttiFlags.LoopFile));
 
                     _deltaTime = _watch.Elapsed.TotalSeconds;
                     _watch.Restart();

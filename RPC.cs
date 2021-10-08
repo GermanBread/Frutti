@@ -32,14 +32,14 @@ namespace FruttiReborn {
 
             await Task.Delay(0);
         }
-        public async Task SetSong(Audio clip, bool isLoop) {
+        public async Task SetSong(Audio clip) {
             // Call this as many times as you want and anywhere in your code.
             client.SetPresence(new RichPresence() {
-                Details = $"Playing: {clip.FileName}" + (isLoop ? "on repeat" : ""),
-                Timestamps = !isLoop ? new Timestamps {
+                Details = $"Listening to: {clip.FileName}",
+                Timestamps = new Timestamps {
                     Start = DateTime.UtcNow.Subtract(new TimeSpan(0, 0, 0, (int)Math.Round(clip.ClipPosition))),
                     End = DateTime.UtcNow.Subtract(new TimeSpan(0, 0, 0, (int)Math.Round(clip.ClipPosition - clip.ClipLength)))
-                } : null,
+                },
                 Secrets = null
             });
             await Task.Delay(0);
